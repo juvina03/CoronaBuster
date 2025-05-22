@@ -1,9 +1,9 @@
 import Phaser from 'phaser'
 
 //import AmongUsScene from './scenes/AmongUsScene.js'
-import StartScene from "./scenes/StartScene";
-import CoronaBusterScene from './scenes/CoronaBuster';
-import GameOverScene from "./scenes/GameOverScene";
+import StartScene from "./StartScene";
+import CoronaBusterScene from './CoronaBuster';
+import GameOverScene from "./GameOverScene";
 
 const config = {
 	type: Phaser.AUTO,
