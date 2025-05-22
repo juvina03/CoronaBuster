@@ -1,22 +1,22 @@
 import Phaser from 'phaser'
-
-//import AmongUsScene from './scenes/AmongUsScene.js'
-import StartScene from "./scenes/StartScene";
-import CoronaBusterScene from './scenes/CoronaBuster';
+//import StartScene from "./scenes/StartScene";
+import MathFighterScene from './scenes/MathFighterScene';
 import GameOverScene from "./scenes/GameOverScene";
+
 
 const config = {
 	type: Phaser.AUTO,
 	parent: 'app',
-	width: 400,
-	height: 620,
+	width: 480,
+	height: 640,
 	physics: {
 		default: 'arcade',
 		arcade: {
-			gravity: { y: 0 },
+			gravity: { y: 400 },
+			//debug: true
 		},
 	},
-	scene: [StartScene, CoronaBusterScene, GameOverScene],
+	scene: [MathFighterScene, GameOverScene],
 	scale : {
 		mode :Phaser.Scale.FIT,
 		autoCenter : Phaser.Scale.CENTER_BOTH
