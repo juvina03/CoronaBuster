@@ -230,7 +230,6 @@ export default class CoronaBusterScene extends Phaser.Scene {
       player.anims.play("turn");
     }
 
-
      //above there’s codes for moving player
     if ((this.shoot) && time > this.lastFired) {
       const laser = this.lasers.get(0, 0, 'laser')
