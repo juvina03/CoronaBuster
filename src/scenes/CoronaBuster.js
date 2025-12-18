@@ -216,27 +216,20 @@ export default class CoronaBusterScene extends Phaser.Scene {
       player.setVelocityX(this.speed);
       player.anims.play("right", true);
       player.setFlipX(true);
-    } else {
-      player.setVelocityX(0);
-      player.anims.play("turn");
-    }
-
+    } 
     //// Check for up and down movement
-    if (this.cursors.up.isDown) {
+    else if (this.cursors.up.isDown) {
       player.setVelocityY(this.speed * -1); // Move up
       player.anims.play("turn", true); // Play turn animation
     } else if (this.cursors.down.isDown) {
       player.setVelocityY(this.speed); // Move down
       player.anims.play("turn", true); // Play turn animation
     } else {
+      player.setVelocityX(0);
       player.setVelocityY(0);
       player.anims.play("turn");
     }
 
-    // If no movement, play the turn animation
-    if (!this.cursors.left.isDown && !this.cursors.right.isDown && !this.cursors.up.isDown && !this.cursors.down.isDown) {
-      player.anims.play("turn");
-    }
 
      //above there’s codes for moving player
     if ((this.shoot) && time > this.lastFired) {
